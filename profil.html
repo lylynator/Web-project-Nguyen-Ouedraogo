@@ -1,0 +1,306 @@
+﻿<style>
+
+
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        background-attachment: fixed;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        /*background-image: url(https://cdn.futura-sciences.com/buildsv6/images/wide1920/1/b/b/1bb29fb84b_106480_mars-rouge-ok.jpg);*/
+    }
+    #container {
+        margin: 20px;
+        width: 200px;
+        height: 100px;
+    }
+
+
+    #part1 {
+        background: url("img/mars1.jpg") center 0 no-repeat fixed;
+        font-size: 25px;
+    }
+
+    #part2 {
+        background: url("img/rover.jpg") center 0 no-repeat fixed;
+        font-size: 25px;
+    }
+
+    #part3 {
+        background: url("img/mars.jpg") center 0 no-repeat fixed;
+        font-size: 25px;
+    }
+
+        #part3 .inside p {
+            color: #170b27;
+            background-color: #fdfbfb77;
+            padding: 15px 15px;
+            border-radius: 10px;
+            text-align: center;
+            position: center
+        }
+
+    #part1 .inside p {
+        color: white;
+        background-color: black;
+        padding: 15px 15px;
+        border-radius: 10px;
+        opacity: 0.7;
+    }
+
+    #part2 .inside p {
+        color: #170b27;
+        background-color: #fdfbfb77;
+        padding: 15px 15px;
+        border-radius: 10px;
+    }
+
+    .inside {
+        margin: 0px auto;
+        text-align: justify;
+        width: 500px;
+        padding: 50px 0px;
+        height: 1000px;
+        position: center;
+    }
+
+    footer {
+        background: black;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        padding-top: 50px;
+        height: 50px;
+        text-align: center;
+    }
+
+    h1 {
+        color: white;
+        font-family: 'OCR A';
+        text-align: center;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 50px;
+        margin-top: 50px;
+    }
+
+        .footer li {
+            display: inline-block;
+        }
+
+
+
+        .footer a {
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-family: 'OCR A';
+            opacity: 0.5;
+            font-size: 20px;
+            text-decoration: none;
+            margin-bottom: 5px;
+        }
+
+    .menu li {
+        display: inline-block;
+    }
+
+    .menu a {
+        display: block;
+        width: 150px;
+        opacity: 0.5;
+        padding: 5px 30px; /* Ajout de marges internes */
+        text-align: center; /* Centrage du texte à l'intérieur des boutons */
+        border: 3px solid white; /* Ajout d'une bordure de couleur aux boutons */
+        background-color: black; /* Ajout d'une couleur d'arrière-plan */
+        color: white; /* Modification de la couleur du texte */
+        text-decoration: none; /* Suppression du soulignement des liens */
+        margin: 10px; /* Espacements des boutons */
+        border-radius: 5px; /* Ajout d'arrondis pour les boutons */
+        font-family: 'OCR A';
+    }
+
+    a:hover,
+    a:focus {
+        background-color: #6d1500;
+        color: #ed2794;
+        border-color: #9f2407;
+        color: white;
+        transition: all 1s ease-out;
+    }
+
+    .menu {
+        background-color: black;
+        text-align: center;
+    }
+
+    .ml3 {
+        font-size: 3.5em;
+        color: white;
+        font-family: 'OCR A';
+        text-align: center;
+        opacity: 0.5;
+    }
+</style>
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <title> Welcome to Mars</title>
+
+
+</head>
+
+
+<body>
+
+
+
+
+    <h1 class="ml3"> Mon profil </h1>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600,800,900" rel="stylesheet" type="text/css">
+    <div id="container"></div>
+
+    <nav>
+        <ul class="menu">
+            <li>
+                <a href="accueil.html">Accueil</a>
+            </li>
+            <li>
+                <a href="profil.html">Mon profil</a>
+            </li>
+            <li>
+                <a href="journal.html">Journal de bord</a>
+
+            </li>
+        </ul>
+
+    </nav>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script>
+
+        var textWrapper = document.querySelector('.ml3');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+        anime.timeline({loop: true})
+        .add({
+        targets: '.ml3 .letter',
+        opacity: [0,1],
+        easing: "easeInOutQuad",
+        duration: 2250,
+        delay: (el, i) => 150 * (i+1)
+        }).add({
+        targets: '.ml3',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000000000
+        });
+
+
+
+        // progressbar.js@1.0.0 version is used
+        // Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
+
+        var bar = new ProgressBar.SemiCircle(container, {
+        strokeWidth: 6,
+        color: '#FFEA82',
+        trailColor: '#eee',
+        trailWidth: 1,
+        easing: 'easeInOut',
+        duration: 1400,
+        svgStyle: null,
+        text: {
+        value: '',
+        alignToBottom: false
+        },
+        from: {color: '#FFEA82'},
+        to: {color: '#ED6A5A'},
+        // Set default step function for all animate calls
+        step: (state, bar) => {
+        bar.path.setAttribute('stroke', state.color);
+        var value = Math.round(bar.value() * 100);
+        if (value === 0) {
+        bar.setText('');
+        } else {
+        bar.setText(value);
+        }
+
+        bar.text.style.color = state.color;
+        }
+        });
+        bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+        bar.text.style.fontSize = '2rem';
+
+        bar.animate(1.0);  // Number from 0.0 to 1.0
+
+
+
+
+
+    </script>
+
+
+    <div id="part1">
+        <div class="inside">
+
+        </div>
+    </div>
+
+
+    <div id="part2">
+        <div class="inside">
+            <p>
+                Donec suscipit elit blandit cursus convallis. Morbi fringilla massa sed nunc gravida iaculis. Praesent eget nisl a lorem luctus
+                sollicitudin. Phasellus ac metus dui. Etiam sit amet rhoncus sapien. Ut id augue id nisi blandit accumsan. Fusce aliquet urna nec
+                rhoncus pretium. Praesent tristique ante eget ipsum bibendum, a pharetra dui elementum. Mauris eget pulvinar sapien. Suspendisse
+                eget quam est. In fringilla porttitor erat ac imperdiet. Cras consequat vel mauris non aliquam. Proin nec massa tristique neque
+                ornare porttitor ut et augue. Sed enim lacus, dictum a sapien vitae, imperdiet semper nunc. Curabitur rutrum faucibus felis eu
+                luctus. Quisque libero dui, feugiat eget rhoncus sit amet, ornare ac nibh.
+            </p>
+        </div>
+    </div>
+
+    <div id="part3">
+        <div class="inside">
+            <p>
+                Proin vestibulum velit venenatis congue tincidunt. Proin dapibus condimentum hendrerit. Vivamus rhoncus vestibulum
+                sodales. Donec odio eros, ultricies sed tortor non, faucibus cursus dolor. Duis ac cursus urna, id varius dui. Nulla et
+                facilisis orci. Suspendisse consectetur est id facilisis feugiat. Cras finibus magna in neque pretium hendrerit ac quis
+                elit. Cras lacinia purus ut lorem dignissim tincidunt. Ut non arcu quis nulla consequat lobortis. Fusce egestas quis
+                tortor et scelerisque. Integer fermentum lectus eu sodales consectetur. Phasellus sit amet nisl non lorem pellentesque
+                pretium ut eu enim. Integer vestibulum urna magna, ac consequat dui pretium ac. Nam nulla nulla, rhoncus a mollis a,
+                condimentum vel lectus.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+
+        <nav class="footer">
+            <ul>
+                <li><a href="#Crédit">Accueil</a></li>
+                <li><a href="#Apropos">Qui sommes-nous ?</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+
+    </footer>
+
+</body>
+
+
+
+</html>

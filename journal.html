@@ -1,0 +1,608 @@
+﻿<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        background-attachment: fixed;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        /*background-image: url(https://cdn.futura-sciences.com/buildsv6/images/wide1920/1/b/b/1bb29fb84b_106480_mars-rouge-ok.jpg);*/
+    }
+
+
+    #part1 {
+        background: url("img/mars1.jpg") center 0 no-repeat fixed;
+        font-size: 25px;
+    }
+
+    #part2 {
+        background: url("img/rover.jpg") center 0 no-repeat fixed;
+        font-size: 25px;
+    }
+
+    #part3 {
+        background: url("img/mars.jpg") center 0 no-repeat fixed;
+        font-size: 25px;
+    }
+
+    #part4 {
+        background: url("img/agri.jpg") center 0 no-repeat fixed;
+        font-size: 25px;
+    }
+
+        #part3 .inside p {
+            color: #170b27;
+            background-color: #fdfbfb77;
+            padding: 15px 15px;
+            border-radius: 10px;
+            text-align: center;
+            position: center
+        }
+
+    #part1 .inside p {
+        color: white;
+        background-color: black;
+        padding: 15px 15px;
+        border-radius: 10px;
+        opacity: 0.7;
+    }
+
+    #part2 .inside p {
+        color: #170b27;
+        background-color: #fdfbfb77;
+        padding: 15px 15px;
+        border-radius: 10px;
+    }
+    #part4 .inside p {
+        color: #170b27;
+        background-color: #fdfbfb77;
+        padding: 15px 15px;
+        border-radius: 10px;
+    }
+
+
+    .inside {
+        margin: 0px auto;
+        text-align: justify;
+        width: 500px;
+        padding: 50px 0px;
+        height: 1000px;
+        position: center;
+    }
+    table {
+        border-collapse: collapse;
+        border: 2px solid rgb(200,200,200);
+        letter-spacing: 1px;
+        font-size: 0.8rem;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    th, td, tr {
+        border: 1px solid rgb(190,190,190);
+        padding: 10px 20px;
+        align-content: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: ghostwhite;
+    }
+
+    th {
+        background-color: whitesmoke;
+        color: lightslategrey;
+    }
+
+    .form-style-7 {
+        max-width: 400px;
+        margin: 50px auto;
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 2px;
+        padding: 20px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+    }
+
+        .form-style-7 h1 {
+            display: block;
+            text-align: center;
+            padding: 0;
+            margin: 0px 0px 20px 0px;
+            color: #5C5C5C;
+            font-size: x-large;
+        }
+
+        .form-style-7 ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .form-style-7 li {
+            display: block;
+            padding: 9px;
+            border: 1px solid #DDDD;
+            margin-bottom: 30px;
+            border-radius: 3px;
+        }
+
+            .form-style-7 li:last-child {
+                border: none;
+                margin-bottom: 0px;
+                text-align: center;
+            }
+
+            .form-style-7 li > label {
+                display: block;
+                float: left;
+                margin-top: -19px;
+                background-color: rgba(0, 0, 0, 0.8);
+                height: 14px;
+                padding: 2px 5px 2px 5px;
+                color: white;
+                font-size: 14px;
+                overflow: hidden;
+                font-family: 'OCR A';
+            }
+
+        .form-style-7 input[type="text"],
+        .form-style-7 input[type="date"],
+        .form-style-7 input[type="datetime"],
+        .form-style-7 input[type="email"],
+        .form-style-7 input[type="number"],
+        .form-style-7 input[type="search"],
+        .form-style-7 input[type="time"],
+        .form-style-7 input[type="url"],
+        .form-style-7 input[type="password"],
+        .form-style-7 textarea,
+        .form-style-7 select {
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            width: 100%;
+            display: block;
+            outline: none;
+            border: none;
+            height: 25px;
+            line-height: 25px;
+            font-size: 16px;
+            padding: 0;
+            font-family: 'OCR A';
+        }
+
+            .form-style-7 input[type="text"]:focus,
+            .form-style-7 input[type="date"]:focus,
+            .form-style-7 input[type="datetime"]:focus,
+            .form-style-7 input[type="email"]:focus,
+            .form-style-7 input[type="number"]:focus,
+            .form-style-7 input[type="search"]:focus,
+            .form-style-7 input[type="time"]:focus,
+            .form-style-7 input[type="url"]:focus,
+            .form-style-7 input[type="password"]:focus,
+            .form-style-7 textarea:focus,
+            .form-style-7 select:focus {
+            }
+
+        .form-style-7 li > span {
+            background: rgba(0, 0, 0, 0.8);
+            display: block;
+            padding: 3px;
+            margin: 0 -9px -9px -9px;
+            text-align: center;
+            color: #C0C0C0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 11px;
+        }
+
+        .form-style-7 textarea {
+            resize: none;
+        }
+
+        .form-style-7 input[type="submit"],
+        .form-style-7 input[type="button"] {
+            background: #6d1500;
+            border: none;
+            padding: 10px 20px 10px 20px;
+            border-radius: 3px;
+            color: lightgrey;
+        }
+
+            .form-style-7 input[type="submit"]:hover,
+            .form-style-7 input[type="button"]:hover {
+                background: #e44431;
+                color: #fff;
+                transition: all 1s ease-out;
+            }
+
+    input:invalid {
+        border: 1px dashed red;
+        caret-color: red;
+    }
+
+
+        form div + div {
+            margin-top: 1em;
+        }
+
+
+
+
+
+    
+
+  
+
+
+
+
+    footer {
+        background: black;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        padding-top: 50px;
+        height: 50px;
+        text-align: center;
+    }
+
+    h1 {
+        color: white;
+        font-family: 'OCR A';
+        text-align: center;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 50px;
+        margin-top: 50px;
+    }
+
+        .footer li {
+            display: inline-block;
+        }
+
+
+
+        .footer a {
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-family: 'OCR A';
+            opacity: 0.5;
+            font-size: 20px;
+            text-decoration: none;
+            margin-bottom: 5px;
+        }
+
+    .menu li {
+        display: inline-block;
+    }
+
+    .menu a {
+        display: block;
+        width: 150px;
+        opacity: 0.5;
+        padding: 5px 30px; /* Ajout de marges internes */
+        text-align: center; /* Centrage du texte à l'intérieur des boutons */
+        border: 3px solid white; /* Ajout d'une bordure de couleur aux boutons */
+        background-color: black; /* Ajout d'une couleur d'arrière-plan */
+        color: white; /* Modification de la couleur du texte */
+        text-decoration: none; /* Suppression du soulignement des liens */
+        margin: 10px; /* Espacements des boutons */
+        border-radius: 5px; /* Ajout d'arrondis pour les boutons */
+        font-family: 'OCR A';
+    }
+
+    a:hover,
+    a:focus {
+        background-color: #6d1500;
+        color: #ed2794;
+        border-color: #9f2407;
+        color: white;
+        transition: all 1s ease-out;
+    }
+
+    .menu {
+        background-color: black;
+        text-align: center;
+    }
+
+    .categorie li {
+        display: inline-block;
+    }
+
+    .categorie a {
+        display: block;
+        width: 150px;
+        opacity: 0.5;
+        padding: 5px 15px; /* Ajout de marges internes */
+        text-align: center; /* Centrage du texte à l'intérieur des boutons */
+        border: 2px solid white; /* Ajout d'une bordure de couleur aux boutons */
+        background-color: lightgrey; /* Ajout d'une couleur d'arrière-plan */
+        color: black; /* Modification de la couleur du texte */
+        text-decoration: none; /* Suppression du soulignement des liens */
+        margin: 5px; /* Espacements des boutons */
+        border-radius: 100px; /* Ajout d'arrondis pour les boutons */
+        font-family: 'OCR A';
+        font-size: 12px;
+    }
+
+    .categorie {
+        background-color: black;
+        text-align: center;
+    }
+
+    .ml3 {
+        font-size: 3.5em;
+        color: white;
+        font-family: 'OCR A';
+        text-align: center;
+        opacity: 0.5;
+    }
+
+
+</style>
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="style.css" />
+    <title>Mars</title>
+
+
+
+
+</head>
+
+
+<body>
+
+    <h1 class="ml3"> Journal de bord </h1>
+
+    <nav>
+        <ul class="menu">
+            <li>
+                <a href="accueil.html">Accueil</a>
+            </li>
+            <li>
+                <a href="profil.html">Mon profil</a>
+            </li>
+            <li>
+                <a href="journaldebord.html">Journal de bord</a>
+
+            </li>
+        </ul>
+
+    </nav>
+    <nav>
+        <ul class="categorie">
+            <li>
+                <a href="#part3">Exploration</a>
+            </li>
+            <li>
+                <a href="#part4">Agriculture</a>
+            </li>
+            <li>
+                <a href="#part2">Reparation</a>
+
+            </li>
+
+        </ul>
+
+    </nav>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script type="text/javascript">
+
+
+        var textWrapper = document.querySelector('.ml3');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+        anime.timeline({loop: true})
+        .add({
+        targets: '.ml3 .letter',
+        opacity: [0,1],
+        easing: "easeInOutQuad",
+        duration: 2250,
+        delay: (el, i) => 150 * (i+1)
+        }).add({
+        targets: '.ml3',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000000000
+        });
+
+
+        function ajouter() {
+
+
+        var date = document.getElementById("date").value;
+        var description = document.getElementById("description").value;
+        var mission = document.getElementById("mission").value;
+        console.log(mission);
+
+
+        if(date != '' && description != '') {
+
+        alert("Vous ajoutez un élément au tableau ! ");
+
+        TR = document.createElement ("tr");
+
+        // Création de la première cellule
+        TD1  = document.createElement ("td");
+        TXT1 = document.createTextNode (date);
+        TD1.appendChild (TXT1);
+
+        // Création de la deuxième cellule
+        TD2  = document.createElement ("td");
+        TXT2 = document.createTextNode (description);
+        TD2.appendChild (TXT2);
+
+
+
+        // On assemble les cellules a la ligne
+        TR.appendChild(TD1);
+        TR.appendChild(TD2);
+
+        if(mission == "exploration"){
+        // On assemble la ligne au tableau
+        document.getElementById ('tab_explo').appendChild (TR);
+        }
+
+        if(mission == "réparation"){
+        document.getElementById ('tab_rep').appendChild (TR);
+        }
+
+        if(mission == "agriculture"){
+        document.getElementById ('tab_agri').appendChild (TR);
+        }
+
+        }
+
+
+
+        }
+
+        function supprimer()
+        {
+        document.getElementById('tab_explo').removeChild(TR);
+
+        }
+
+
+    </script>
+
+    <div id="part1">
+        <div class="inside">
+            <form action="/ma-page-de-traitement" method="post" class="form-style-7">
+
+                <ul>
+                    <li>
+                        <label for="date">Date</label>
+                        <input type="text" name="date" id="date">
+                        <span>Enter the date</span>
+                    </li>
+                    <li>
+                        <label for="mission">Mission</label>
+                        <select id="mission" name="mission">
+                            <option value="agriculture">Agriculture</option>
+                            <option value="exploration">Exploration</option>
+                            <option value="réparation">Réparation</option>
+
+
+                        </select>
+                        <span>Mission</span>
+                    </li>
+
+                    <li>
+                        <label for="description">Description</label>
+                        <textarea name="description" onkeyup="adjust_textarea(this)" id="description"></textarea>
+                        <span>Describe your mission</span>
+                    </li>
+                    <li>
+                        <input type="submit" value="Add a new entry" onclick="ajouter()">
+                    </li>
+                </ul>
+
+
+
+
+            </form>
+        </div>
+    </div>
+
+
+    <div id="part2">
+        <div class="inside">
+            <h2 class="ml3">Reparation</h2>
+            <div id="tab_rep">
+                <table>
+
+                    <tr>
+
+                        <th>Date</th>
+                        <th>Description</th>
+
+
+                    </tr>
+
+
+                </table>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div id="part3">
+        <div class="inside">
+            <h2 class="ml3">Exploration</h2>
+            <div id="tab_explo">
+                <table>
+
+                    <tr>
+
+                        <th>Date</th>
+                        <th>Description</th>
+
+
+                    </tr>
+
+
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="part4">
+        <div class="inside">
+            <h2 class="ml3">Agriculture</h2>
+            <div id="tab_agri">
+                <table>
+
+                    <tr>
+
+                        <th>Date</th>
+                        <th>Description</th>
+
+
+                    </tr>
+
+
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <footer>
+
+        <nav class="footer">
+            <ul>
+                <li><a href="#Crédit">Accueil</a></li>
+                <li><a href="#Apropos">Qui sommes-nous ?</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+
+    </footer>
+
+
+
+</body>
+
+
+
+
+
+
+</html>
